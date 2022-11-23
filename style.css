@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: sans-serif;
-  color: #d8bdd9;
+  color: white;
 }
 
 *,
@@ -23,11 +23,47 @@ body {
   text-align: center;
   background-color: #333;
 }
+/* 
+.main  {
+  margin: 50vh auto;
+} */
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
+
+/* 
+slider
+ */
+
+.slides {
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
+  height: 100vh;
+}
+
+.slide {
+  width: 100%;
+  height: inherit;
+  scroll-snap-align: center;
+}
+
+.slide-container {
+  width: 80%;
+  height: inherit;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* 
+section 1
+*/
 
 .verse-song-k {
   margin: 0 auto;
@@ -44,4 +80,16 @@ body {
 .why img {
   width: 400px;
   border-radius: 1rem;
+}
+
+.why p {
+  color: #d8bdd9;
+}
+
+/*
+section 2
+*/
+
+.me {
+  font-size: 150%;
 }
