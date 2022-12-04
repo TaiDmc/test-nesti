@@ -23,14 +23,22 @@ body {
   text-align: center;
   background-color: #333;
 }
-/* 
-.main  {
-  margin: 50vh auto;
-} */
 
 .container {
   width: 100%;
   margin: 0 auto;
+}
+
+/* welcome */
+.welcome a {
+  color: thistle;
+}
+
+.welcome img {
+  width: 10vw;
+  height: auto;
+  border-radius: 0.5rem;
+  opacity: 0.01;
 }
 
 /* 
