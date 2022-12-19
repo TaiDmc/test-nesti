@@ -1,8 +1,16 @@
+:root {
+  --main-color: #d8bdd9;
+  --color: #fff;
+  --bg-color-dark: #222;
+  --second-main-color: #d2c3d1;
+  --second-color: #333;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
   font-family: sans-serif;
-  color: white;
+  color: var(--color);
 }
 
 *,
@@ -21,7 +29,7 @@ body {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #333;
+  background-color: var(--bg-color-dark);
 }
 
 .container {
@@ -31,7 +39,7 @@ body {
 
 /* welcome */
 .welcome a {
-  color: thistle;
+  color: var(--main-color);
 }
 
 .welcome img {
@@ -69,6 +77,12 @@ slider
   justify-items: center;
 }
 
+@media screen and (min-width: 1024px) {
+  .slide-container {
+    width: 50%;
+  }
+}
+
 /* 
 section 1
 */
@@ -91,7 +105,7 @@ section 1
 }
 
 .why p {
-  color: #d8bdd9;
+  color: var(--main-color);
 }
 
 /*
@@ -114,13 +128,43 @@ section 2
 
 /* dejate querer */
 .dejate-querer {
-  border: medium solid black;
+  border: medium solid #00000050;
+  border-radius: 0.5rem;
   padding: 3rem 1rem;
 }
 
 .dejate-querer img {
   width: 10vw;
   height: auto;
-  filter: brightness(0.5);
+  filter: brightness(0.3) opacity(0.8);
   transform: rotate(110deg);
+}
+
+/* scroll top btn */
+.scroll-top-btn {
+  position: fixed;
+  z-index: 999;
+  bottom: 1vh;
+  right: calc(4.25rem + 1vh);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--second-main-color);
+  color: var(--second-color);
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
